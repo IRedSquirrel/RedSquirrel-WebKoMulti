@@ -1,0 +1,34 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.pdb
+
+# NuGet
+packages/
+*.nupkg
+project.lock.json
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# App data (never commit: accounts, VPN credentials, browser profiles, logs)
+Settings/
+Sessions/
+Logs/
+*.dat
+*.dat.tmp
+*.bozuk-*
+
+# Real game frames (show other players)
+Docs/olcum/
+
+# Release artifacts
+dist/
+*.zip

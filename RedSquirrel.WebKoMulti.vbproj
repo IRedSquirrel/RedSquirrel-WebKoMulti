@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{0266A3C3-A0F9-4CC5-A4B8-06A59C89F49E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>RedSquirrel.WebKoMulti.Program</StartupObject>
+    <RootNamespace>RedSquirrel.WebKoMulti</RootNamespace>
+    <AssemblyName>RedSquirrel.WebKoMulti</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Empty</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>On</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Web.WebView2">
+      <Version>1.0.2903.40</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <!-- Explicit file list: a new .vb file must be added here, or it is not compiled. -->
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Core\AppPaths.vb" />
+    <Compile Include="Core\Input\CdpInput.vb" />
+    <Compile Include="Core\Native\HookNative.vb" />
+    <Compile Include="Core\Native\NetNative.vb" />
+    <Compile Include="Core\Native\RasNative.vb" />
+    <Compile Include="Core\Native\UiNative.vb" />
+    <Compile Include="Core\Session\GameSession.vb" />
+    <Compile Include="Core\Vision\GameCanvas.vb" />
+    <Compile Include="Core\Vision\ViewCapture.vb" />
+    <Compile Include="Core\Vision\WebCoordGlyphs.vb" />
+    <Compile Include="Core\Vision\WebCoordReader.vb" />
+    <Compile Include="Engine\Follow\FollowCapture.vb" />
+    <Compile Include="Engine\Follow\FollowController.vb" />
+    <Compile Include="Engine\Follow\FollowGate.vb" />
+    <Compile Include="Engine\Follow\FollowInput.vb" />
+    <Compile Include="Engine\Follow\FollowPace.vb" />
+    <Compile Include="Engine\Follow\FollowSelfTest.vb" />
+    <Compile Include="Engine\Follow\FollowWalker.vb" />
+    <Compile Include="Engine\Follow\PosFilter.vb" />
+    <Compile Include="Engine\Login\AfterEnter.vb" />
+    <Compile Include="Engine\Login\AfterEnterTemplates.vb" />
+    <Compile Include="Engine\Login\GameSetup.vb" />
+    <Compile Include="Engine\Login\GameSetupDigits.vb" />
+    <Compile Include="Engine\Login\GameSetupTemplates.vb" />
+    <Compile Include="Engine\Login\LauncherPage.vb" />
+    <Compile Include="Engine\Login\LoginKeys.vb" />
+    <Compile Include="Engine\Login\LoginProbe.vb" />
+    <Compile Include="Engine\Login\LoginScreens.vb" />
+    <Compile Include="Engine\Login\LoginSelfTest.vb" />
+    <Compile Include="Engine\Login\LoginShots.vb" />
+    <Compile Include="Engine\Login\WebLogin.vb" />
+    <Compile Include="Engine\Mirror\InputMirror.vb" />
+    <Compile Include="Engine\Mirror\MirrorMap.vb" />
+    <Compile Include="Forms\Controls\BrandLogo.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\KoButton.vb" />
+    <Compile Include="Forms\Controls\KoCard.vb" />
+    <Compile Include="Forms\Controls\KoChoice.vb" />
+    <Compile Include="Forms\Controls\KoCombo.vb" />
+    <Compile Include="Forms\Controls\KoGrid.vb" />
+    <Compile Include="Forms\Controls\KoMenu.vb" />
+    <Compile Include="Forms\Controls\KoPaint.vb" />
+    <Compile Include="Forms\Controls\KoPill.vb" />
+    <Compile Include="Forms\Controls\KoTabStrip.vb" />
+    <Compile Include="Forms\Controls\KoTextBox.vb" />
+    <Compile Include="Forms\Controls\KoToggle.vb" />
+    <Compile Include="Forms\Games\GameCell.Designer.vb">
+      <DependentUpon>GameCell.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Games\GameCell.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Games\GameWindow.Designer.vb">
+      <DependentUpon>GameWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Games\GameWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Games\LeaderWindow.Designer.vb">
+      <DependentUpon>LeaderWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Games\LeaderWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InGameSteps.vb" />
+    <Compile Include="Forms\KoConfirm.vb" />
+    <Compile Include="Forms\Main.Designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RenderPreview.vb" />
+    <Compile Include="Forms\SessionHub.vb" />
+    <Compile Include="Forms\SessionLook.vb" />
+    <Compile Include="Forms\Theme.vb" />
+    <Compile Include="Forms\UiPrefs.vb" />
+    <Compile Include="Forms\UiStyle.vb" />
+    <Compile Include="Forms\Views\AccountsView.Designer.vb">
+      <DependentUpon>AccountsView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Views\AccountsView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Views\FollowView.Designer.vb">
+      <DependentUpon>FollowView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Views\FollowView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Views\GamesView.Designer.vb">
+      <DependentUpon>GamesView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Views\GamesView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Views\LogView.Designer.vb">
+      <DependentUpon>LogView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Views\LogView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Views\VpnView.Designer.vb">
+      <DependentUpon>VpnView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Views\VpnView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Program.vb" />
+    <Compile Include="Services\Accounts\AccountStore.vb" />
+    <Compile Include="Services\Logging\BotLog.vb" />
+    <Compile Include="Services\Vpn\UpstreamProxy.vb" />
+    <Compile Include="Services\Vpn\VpnBridge.vb" />
+    <Compile Include="Services\Vpn\VpnDns.vb" />
+    <Compile Include="Services\Vpn\VpnErrors.vb" />
+    <Compile Include="Services\Vpn\VpnManager.vb" />
+    <Compile Include="Services\Vpn\VpnPhonebook.vb" />
+    <Compile Include="Services\Vpn\VpnProbe.vb" />
+    <Compile Include="Services\Vpn\VpnSelfTest.vb" />
+    <Compile Include="Services\Vpn\VpnStore.vb" />
+    <EmbeddedResource Include="Forms\Games\GameCell.resx">
+      <DependentUpon>GameCell.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Games\GameWindow.resx">
+      <DependentUpon>GameWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Games\LeaderWindow.resx">
+      <DependentUpon>LeaderWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Views\AccountsView.resx">
+      <DependentUpon>AccountsView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Views\FollowView.resx">
+      <DependentUpon>FollowView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Views\GamesView.resx">
+      <DependentUpon>GamesView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Views\LogView.resx">
+      <DependentUpon>LogView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Views\VpnView.resx">
+      <DependentUpon>VpnView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\app.ico">
+      <LogicalName>RedSquirrel.WebKoMulti.app.ico</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\logo.png">
+      <LogicalName>RedSquirrel.WebKoMulti.logo.png</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
